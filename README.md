@@ -2,7 +2,7 @@ What is it?
 ===========
 
 **TM1650_STM8** is a library for the [Arduino](http://arduino.cc/) to interface with Seven Segment Display based on the
-TM1650 controller or compatibles (FD650). This library support for STM8s under I2C interface.
+TM1650 controller or compatibles (FD650B). This library support for STM8s under I2C interface.
 Due to the Flash memory size limitation, it does **NOT** support input features (keypress scan).
 
 This is a modified version of the [Mozz_TM1650 library](https://github.com/mozgy/Mozz_TM1650) written by [Mario Mikočević](https://github.com/mozgy). 
@@ -33,6 +33,12 @@ V / VCC      | +3.3V Pin / +5V
 C / SCL      | PD4
 D / SDA      | PB5
 G / GND      | Ground Pin
+
+
+Demo video
+============
+[![TM1650 / FD650B](https://img.youtube.com/vi/BmOw3vWxCEU/0.jpg)](https://www.youtube.com/watch?v=BmOw3vWxCEU "TM1650 / FD650B")
+
 
 Others
 ==============

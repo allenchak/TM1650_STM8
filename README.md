@@ -10,16 +10,16 @@ It is ported from C++ to C syntax and is meant to be used with the sduino enviro
 
 This library is meant to have a minimal memory footprint. 
 
-![FD650_Front.jpg](https://raw.githubusercontent.com/allenchak/TM1650_STM8/images/FD650_Front.jpg)
+![FD650_Front.jpg](https://raw.githubusercontent.com/allenchak/TM1650_STM8/master/images/FD650_Front.jpg)
 
-![FD650_Back.jpg](https://raw.githubusercontent.com/allenchak/TM1650_STM8/images/FD650_Back.jpg)
+![FD650_Back.jpg](https://raw.githubusercontent.com/allenchak/TM1650_STM8/master/images/FD650_Back.jpg)
 
 Installation
 ============
 
 Download the zip file. Then extract and copy to **Sketch Location** (You could check it from **Arduino Preferences**), usaually could be: **Documents\Arduino\hardware\sduino\stm8\libraries**
 
-![Arduino IDE](https://raw.githubusercontent.com/allenchak/TM1650_STM8/images/screenshot-01.png)
+![Arduino IDE](https://raw.githubusercontent.com/allenchak/TM1650_STM8/master/images/screenshot-01.png)
 
 How it Works
 ============

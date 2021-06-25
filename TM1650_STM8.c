@@ -82,7 +82,8 @@ void TM1650_setBrightness(unsigned char b){
     b = 0x07;
   }
   for(char i=0; i< TM1650_NUM_DIGIT; i++){
-    TM1650_sendControl(((iCtrl[i] & 0b11111110) | (b << 4)), i); // Bright ..... Dim; 0, 7, 6, 5, 4, 3, 2, 1
+    iCtrl[i] = ((iCtrl[i] & 0b11111110) | (b << 4));
+    TM1650_sendControl(iCtrl[i], i); // Bright ..... Dim; 0, 7, 6, 5, 4, 3, 2, 1
   }
 }
 

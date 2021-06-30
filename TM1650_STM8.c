@@ -59,13 +59,15 @@ void TM1650_sendDigit(unsigned char data, uint8_t segment){
 
 void TM1650_displayOn(){
   for(char i=0; i< TM1650_NUM_DIGIT; i++){
-    TM1650_sendControl(((iCtrl[i] & 0b11111110) | 0b00000001), i);
+    iCtrl[i] = ((iCtrl[i] & 0b11111110) | 0b00000001);
+    TM1650_sendControl(iCtrl[i], i);
   }
 }
 
 void TM1650_displayOff(){
   for(char i=0; i< TM1650_NUM_DIGIT; i++){
-    TM1650_sendControl((iCtrl[i] & 0b11111110), i);
+    iCtrl[i] = (iCtrl[i] & 0b11111110);
+    TM1650_sendControl(iCtrl[i], i);
   }
 }
 
@@ -82,7 +84,7 @@ void TM1650_setBrightness(unsigned char b){
     b = 0x07;
   }
   for(char i=0; i< TM1650_NUM_DIGIT; i++){
-    iCtrl[i] = ((iCtrl[i] & 0b11111110) | (b << 4));
+    iCtrl[i] = ((iCtrl[i] & 0b11111111) | (b << 4));
     TM1650_sendControl(iCtrl[i], i); // Bright ..... Dim; 0, 7, 6, 5, 4, 3, 2, 1
   }
 }
